@@ -1,0 +1,182 @@
+.hero-container {
+  position: relative;
+  background: url('../assets/my-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.hero-overlay {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero-overlay h5 {
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin: 0 0 1rem 0;
+}
+
+.play-button {
+  font-size: 2rem;
+  padding: 15px 25px;
+  margin-bottom: 1rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.play-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.close-button {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.1);
+}
+
+
+@media (max-width: 1024px) {
+  .hero-overlay h1 {
+    font-size: 2.5rem;
+  }
+  .play-button {
+    font-size: 1.8rem;
+    padding: 12px 22px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-container {
+    height: 60vh;
+    padding: 40px 20px;
+    background-position: center;
+    background-size: cover;
+  }
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+  .hero-overlay h5 {
+    font-size: 0.9rem;
+  }
+  .play-button {
+    font-size: 1.5rem;
+    padding: 12px 20px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .video-wrapper {
+    width: 90%;
+    aspect-ratio: 16 / 9;
+  }
+  .close-button {
+    font-size: 1.5rem;
+    top: -30px;
+    right: 0;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .hero-container {
+    height: 50vh;
+    padding: 30px 15px;
+  }
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+  .hero-overlay h5 {
+    font-size: 0.8rem;
+  }
+  .play-button {
+    font-size: 1.2rem;
+    padding: 10px 16px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  .hero-container {
+    height: 45vh;
+    padding: 20px 10px;
+  }
+  .hero-overlay h1 {
+    font-size: 1.3rem;
+  }
+  .hero-overlay h5 {
+    font-size: 0.7rem;
+  }
+  .play-button {
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+  .video-wrapper {
+    width: 95%;
+  }
+  .close-button {
+    font-size: 1.2rem;
+    top: -25px;
+    right: 0;
+  }
+}

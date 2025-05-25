@@ -1,0 +1,55 @@
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #111;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0; 
+}
+
+.marquee-content {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+  will-change: transform; 
+}
+
+.marquee-content span {
+  font-size: 5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #c59a8d, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+
+@media (max-width: 1024px) {
+  .marquee-content span {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-content span {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .marquee-content span {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .marquee-content span {
+    font-size: 1.5rem;
+  }
+}
+
+
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}

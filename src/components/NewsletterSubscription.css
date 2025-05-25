@@ -1,0 +1,342 @@
+.full-component-container {
+  padding-top: 50px;
+  background-color: #1a1a1a;
+  box-sizing: border-box;
+}
+
+.image-banner-section {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+}
+
+.image-grid {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-image-item {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.instagram-round-icon-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  width: 90px;
+  height: 90px;
+}
+
+.instagram-main-icon {
+  color: #c13584;
+  font-size: 3.5em;
+}
+
+.newsletter-section {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.decorative-icon {
+  width: 30px;
+  height: 30px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f0f0f0"><path d="M16 8v8H8V8h8zm0-2H8c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zM4 2v20h20V2H4zm18 18H6V4h16v16z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto 30px auto;
+  opacity: 0.7;
+  transform: rotate(45deg);
+}
+
+.newsletter-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 5px;
+  line-height: 1.2;
+}
+
+.newsletter-subtitle {
+  font-size: 1.8em;
+  font-weight: 400;
+  margin-bottom: 40px;
+  color: #bbb;
+}
+
+.newsletter-form {
+  background-color: #0d0d0d;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.email-input {
+  flex-grow: 1;
+  padding: 15px 20px;
+  background-color: #0d0d0d;
+  border: none;
+  color: #f0f0f0;
+  font-size: 1em;
+  outline: none;
+}
+
+.email-input::placeholder {
+  color: #888;
+}
+
+.subscribe-button {
+  background-color: transparent;
+  color: #f0f0f0;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #222;
+}
+
+.plane-icon {
+  margin-right: 10px;
+  font-size: 1.2em;
+  transform: rotate(45deg);
+}
+
+.privacy-checkbox {
+  font-size: 0.9em;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.privacy-checkbox input[type="checkbox"] {
+  accent-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+.privacy-link {
+  color: #f0f0f0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.privacy-link:hover {
+  color: #d1a58a;
+}
+
+
+@media (max-width: 1024px) {
+  .image-banner-section {
+    height: 200px;
+  }
+
+  .instagram-round-icon-container {
+    width: 75px;
+    height: 75px;
+    padding: 15px;
+  }
+
+  .instagram-main-icon {
+    font-size: 2.8em;
+  }
+
+  .newsletter-title {
+    font-size: 2.2em;
+  }
+
+  .newsletter-subtitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  .newsletter-form {
+    max-width: 400px;
+  }
+
+  .email-input {
+    font-size: 0.9em;
+    padding: 12px 16px;
+  }
+
+  .subscribe-button {
+    padding: 12px 20px;
+    font-size: 0.9em;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .image-banner-section {
+    height: 180px;
+    flex-direction: column;
+  }
+
+  .image-grid {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .banner-image-item {
+    flex: none;
+    height: 120px;
+    width: 100%;
+  }
+
+  .instagram-round-icon-container {
+    width: 65px;
+    height: 65px;
+    padding: 12px;
+  }
+
+  .instagram-main-icon {
+    font-size: 2.2em;
+  }
+
+  .newsletter-section {
+    padding: 60px 15px;
+  }
+
+  .newsletter-title {
+    font-size: 2em;
+  }
+
+  .newsletter-subtitle {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+  }
+
+  .newsletter-form {
+    max-width: 100%;
+  }
+
+  .email-input {
+    font-size: 0.85em;
+    padding: 10px 14px;
+  }
+
+  .subscribe-button {
+    padding: 10px 18px;
+    font-size: 0.85em;
+  }
+
+  .decorative-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .image-banner-section {
+    height: 150px;
+  }
+
+  .banner-image-item {
+    height: 100px;
+  }
+
+  .instagram-round-icon-container {
+    width: 55px;
+    height: 55px;
+    padding: 10px;
+  }
+
+  .instagram-main-icon {
+    font-size: 1.8em;
+  }
+
+  .newsletter-section {
+    padding: 40px 10px;
+  }
+
+  .newsletter-title {
+    font-size: 1.7em;
+  }
+
+  .newsletter-subtitle {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+  }
+
+  .email-input {
+    font-size: 0.8em;
+    padding: 8px 12px;
+  }
+
+  .subscribe-button {
+    padding: 8px 15px;
+    font-size: 0.8em;
+  }
+
+  .decorative-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .privacy-checkbox {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 360px) {
+  .newsletter-title {
+    font-size: 1.5em;
+  }
+
+  .newsletter-subtitle {
+    font-size: 1em;
+  }
+
+  .instagram-main-icon {
+    font-size: 1.5em;
+  }
+
+  .subscribe-button {
+    padding: 6px 12px;
+    font-size: 0.75em;
+  }
+}

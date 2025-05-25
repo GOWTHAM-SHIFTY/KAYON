@@ -1,0 +1,162 @@
+.architecture-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1b1b1b;
+  color: white;
+  padding: 2rem;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  gap: 2rem;
+  flex-wrap: nowrap; 
+}
+
+.text-section {
+  width: 45%;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.text-section p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-link {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+  width: fit-content;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.about-link:hover {
+  color: #aaa;
+}
+
+.image-section {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.arrow-controls {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.arrow-controls button {
+  background-color: #d7b4a0;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: black;
+  transition: transform 0.2s;
+}
+.arrow-controls button:hover {
+  transform: scale(1.1);
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.zoom-in {
+  animation: zoomIn 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .text-section {
+    width: 50%;
+    padding-right: 1rem;
+  }
+  .image-section {
+    width: 50%;
+  }
+  .text-section p {
+    font-size: 1.6rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .architecture-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem 1rem;
+  }
+  .text-section, .image-section {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  .text-section p {
+    font-size: 1.4rem;
+  }
+  .arrow-controls {
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .arrow-controls button {
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+  .main-image {
+    max-height: 50vh;
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-section p {
+    font-size: 1.2rem;
+  }
+  .arrow-controls button {
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+  .main-image {
+    max-height: 40vh;
+  }
+}

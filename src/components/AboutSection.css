@@ -1,0 +1,158 @@
+.about-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #111;
+  color: white;
+  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+  animation: fadeInLeft 1s ease-in-out;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.content-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 50%;
+  padding-left: 3rem;
+  animation: fadeInRight 1s ease-in-out;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section-tag {
+  color: #ccc;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.section-desc {
+  font-size: 1.1rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.about-button {
+  background-color: #c2958e;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+  background-color: #a87e76;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+  .section-desc {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    padding: 3rem 1rem;
+  }
+
+  .image-container,
+  .content-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .content-container {
+    margin-top: 2rem;
+    padding-left: 1rem;
+    align-items: center;
+  }
+
+  .section-tag,
+  .section-title,
+  .section-desc {
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-desc {
+    font-size: 0.9em;
+  }
+
+  .about-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9em;
+  }
+}

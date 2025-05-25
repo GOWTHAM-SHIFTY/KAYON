@@ -1,0 +1,133 @@
+.app-footer {
+  background-color: #222;
+  color: #f0f0f0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap; 
+}
+
+.social-icon-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #f0f0f0;
+  border-radius: 50%;
+  color: #f0f0f0;
+  font-size: 1.2em;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.social-icon-circle:hover {
+  background-color: #444;
+  border-color: #444;
+}
+
+.footer-nav {
+  margin-top: 20px;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; 
+}
+
+.footer-nav-item {
+  position: relative;
+}
+
+.footer-nav-link {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s ease;
+  white-space: nowrap; 
+}
+
+.footer-nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f0f0f0;
+  transition: width 0.3s ease;
+}
+
+.footer-nav-link:hover {
+  color: #d1a58a;
+}
+
+.footer-nav-link:hover::after {
+  width: 100%;
+  background-color: #d1a58a;
+}
+
+.footer-nav-link.active::after {
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+
+@media (max-width: 768px) {
+  .app-footer {
+    padding: 40px 15px;
+  }
+  .footer-social-icons {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  .social-icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+  }
+  .footer-nav-list {
+    gap: 25px;
+  }
+  .footer-nav-link {
+    font-size: 0.9em;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .app-footer {
+    padding: 30px 10px;
+  }
+  .footer-social-icons {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .social-icon-circle {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9em;
+  }
+  .footer-nav-list {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .footer-nav-link {
+    font-size: 0.85em;
+  }
+}
